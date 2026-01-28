@@ -1,3 +1,11 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+REGISTRADOS_PATH = os.path.join(DATA_DIR, "registrados.txt")
+ELIMINADOS_PATH = os.path.join(DATA_DIR, "eliminados.txt")
+
 ARCHIVO_REGISTRADOS = "registrados.txt"
 ARCHIVO_ELIMINADOS = "eliminados.txt"
 
@@ -26,16 +34,16 @@ def pedir_opcion():
 def cargar_pacientes():
     pacientes = []
     try:
-        with open(ARCHIVO_REGISTRADOS, "r") as archivo:
+        with open(REGISTRADOS_PATH, "r") as archivo:
             for linea in archivo:
                 pacientes.append(linea.strip().split("|"))
     except FileNotFoundError:
-        open(ARCHIVO_REGISTRADOS, "w").close()
+        open(REGISTRADOS_PATH, "w").close()
     return pacientes
 
 
 def guardar_pacientes(pacientes):
-    with open(ARCHIVO_REGISTRADOS, "w") as archivo:
+    with open(REGISTRADOS_PATH, "w") as archivo:
         for p in pacientes:
             archivo.write("|".join(map(str, p)) + "\n")
 
@@ -141,7 +149,7 @@ def eliminar_paciente(pacientes):
 
     eliminado = pacientes.pop(indice)
 
-    with open(ARCHIVO_ELIMINADOS, "a") as archivo:
+    with open(ELIMINADOS_PATH, "a") as archivo:
         archivo.write("|".join(map(str, eliminado)) + "\n")
 
     guardar_pacientes(pacientes)
