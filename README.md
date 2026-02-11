@@ -1,0 +1,39 @@
+## Sistema de Gestión Veterinaria
+Sistema de gestión para clínicas veterinarias desarrollado en Python. Permite registrar y administrar pacientes (mascotas) mediante una interfaz de consola.
+
+## Características
+
+- Registro de pacientes con información completa (nombre, edad, especie, enfermedad, dueño, etc.)
+- Consulta de todos los registros
+- Modificación de datos existentes
+- Eliminación de registros con respaldo automático
+- Almacenamiento en archivos de texto
+
+## Tecnologías
+
+- Python 3.x
+- Archivos de texto para persistencia de datos
+
+## Instalación y Uso
+
+```bash
+git clone https://github.com/fedepolito/portal-veterinaria.git
+cd portal-veterinaria
+python src/main.py
+```
+
+## Estructura
+
+```
+veterinaria/
+├── src/
+│   └── main.py
+├── data/
+│   ├── registrados.txt
+│   └── eliminados.txt
+└── README.md
+```
+
+## Autor
+
+**Federico Polito** - [GitHub](https://github.com/fedepolito) - [LinkedIn](https://www.linkedin.com/in/federico-polito/)
