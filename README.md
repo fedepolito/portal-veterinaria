@@ -33,7 +33,3 @@ veterinaria/
 │   └── eliminados.txt
 └── README.md
 ```
-
-## Autor
-
-**Federico Polito** - [GitHub](https://github.com/fedepolito) - [LinkedIn](https://www.linkedin.com/in/federico-polito/)
