@@ -1,5 +1,5 @@
 ## Sistema de Gestión Veterinaria
-Sistema de gestión para clínicas veterinarias desarrollado en Python. Permite registrar y administrar pacientes (mascotas) mediante una interfaz de consola.
+Este programa permite registrar y administrar pacientes (mascotas) mediante una interfaz de consola.
 
 ## Características
 
